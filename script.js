@@ -1,15 +1,16 @@
-// Get the button and input elements
-const contactButton = document.getElementById('button-contact');
-const emailInput = document.getElementById('email');
-const phoneInput = document.querySelector('input[type="tel"]');
 
+// Get the button element
+const contactButton = document.getElementById('button-contact');
 // Add an event listener to the contact button
-contactButton.addEventListener('click', function() {
+contactButton.addEventListener('click', () => {
     // Read the text from the email input and log it to the console
     const emailText = emailInput.value;
-    console.log( emailText);
+    console.log(emailText);
 });
 
+
+// Get the  input element for email
+const emailInput = document.getElementById('email');
 // Function to create a paragraph and return it
 function createParagraph(text) {
     const paragraph = document.createElement('p');
@@ -17,8 +18,11 @@ function createParagraph(text) {
     return paragraph;
 }
 
-// Add an event listener to the phone input
-phoneInput.addEventListener('input', function() {
+
+// Get the input element for phone input
+const phoneInput = document.querySelector('input[type="tel"]');
+// Add an eventlistener to the phone input
+phoneInput.addEventListener('input', function () {
     // Get the value of the phone input and create a paragraph
     const phoneText = phoneInput.value;
     const phoneParagraph = createParagraph('Phone: ' + phoneText);
