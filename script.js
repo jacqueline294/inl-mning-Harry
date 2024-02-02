@@ -3,14 +3,15 @@
 const contactButton = document.getElementById('button-contact');
 // Add an event listener to the contact button
 contactButton.addEventListener('click', () => {
+    // Get the  input element for email
+    const emailInput = document.getElementById('email');
     // Read the text from the email input and log it to the console
     const emailText = emailInput.value;
     console.log(emailText);
 });
 
 
-// Get the  input element for email
-const emailInput = document.getElementById('email');
+
 // Function to create a paragraph and return it
 function createParagraph(text) {
     const paragraph = document.createElement('p');
